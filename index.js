@@ -47,7 +47,7 @@ app.post("/not", (req, res) => {
     res.send("OK")
 })
 
-app.listen(80, (req, res) => {
-    console.log("Servidor rodando")
-})
-
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
